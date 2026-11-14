@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        # CLIs de IA dentro da imagem: "claude", "codex", "claude codex" ou "" (só APIs)
+        AI_CLIS: ${AI_CLIS:-claude}
+    image: ai-job-finder:latest
+    container_name: ${CONTAINER_NAME:-ai-job-finder}
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "${APP_BIND:-127.0.0.1}:${APP_PORT:-8000}:8000"
+    # Ollama/LM Studio rodando na sua máquina: AI_BASE_URL=http://host.docker.internal:11434/v1
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - appdata:/app/data
+      - ./exemplos:/app/exemplos:ro
+
+  # HTTPS automático (opcional): docker compose --profile caddy up -d
+  # Use só se as portas 80/443 da VPS estiverem livres. Precisa de DOMAIN no .env.
+  caddy:
+    image: caddy:2.10.2-alpine
+    profiles: ["caddy"]
+    restart: unless-stopped
+    env_file: .env
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [app]
+
+volumes:
+  appdata:
+  caddy_data:

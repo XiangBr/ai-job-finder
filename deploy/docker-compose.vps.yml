@@ -1,0 +1,13 @@
+# Override opcional: quando a VPS já tem um proxy reverso (Caddy, Traefik, nginx) rodando em
+# Docker, o app entra numa rede compartilhada só com ele, sem publicar porta.
+#   1. Crie a rede uma vez:           docker network create jobfinder_edge
+#   2. Conecte o container do proxy nela e aponte o domínio para  <CONTAINER_NAME>:8000
+#   3. Ative no .env da VPS:          COMPOSE_FILE=docker-compose.yml:deploy/docker-compose.vps.yml
+services:
+  app:
+    networks: [default, edge]
+
+networks:
+  edge:
+    external: true
+    name: jobfinder_edge

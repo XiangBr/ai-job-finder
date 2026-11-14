@@ -1,0 +1,42 @@
+# Filtros de vaga — perfil FICTÍCIO de demonstração (Ana Exemplo).
+# Edite pela tela "Currículo e filtros" do app; chaves desconhecidas são preservadas.
+perfil_busca:
+  cargos:
+    - area: Análise de Dados / BI
+      prioridade: 1
+      titulos: ["Analista de Dados", "Data Analyst", "Analista de BI", "Business Intelligence"]
+    - area: Engenharia de Dados
+      prioridade: 2
+      titulos: ["Engenheira de Dados", "Engenheiro de Dados", "Data Engineer", "Analytics Engineer"]
+  excluir_titulos: ["Sênior", "Senior", "Sr", "Lead", "Gerente", "Coordenador", "Estágio"]
+
+  nivel: [junior, pleno, analista]
+  contrato: [clt, pj]
+
+  modelo_trabalho:
+    remoto: {aceita: true, prioridade: 1, abrangencia: Brasil}
+    hibrido: {aceita: true, prioridade: 2, cidades: ["São Paulo - SP"]}
+    presencial: {aceita: false}
+  aceita_mudanca: false
+
+  remuneracao:
+    clt: {minimo_base: 6000}
+    pj: {minimo: 8000}
+    nao_informado: marcar        # não descarta; marca "salário a confirmar"
+
+  empresas_bloqueadas: []
+  setores_preferidos: [varejo, tecnologia]
+
+  idiomas_vaga: [pt, en]
+  ingles_maximo_exigido: avançado
+
+  restricoes_eliminatorias:
+    anos_experiencia_max: 4
+    exige_formado: true
+
+  palavras_excluir: ["banco de talentos"]
+  publicada_ha_no_maximo_dias: 7
+  fontes: [linkedin, indeed]
+  frequencia_alerta: "a cada 12 h"
+  score_minimo_para_alerta: 65
+  observacoes: Prefiro times de dados que já usem Python e nuvem; vagas com IA aplicada são um plus.

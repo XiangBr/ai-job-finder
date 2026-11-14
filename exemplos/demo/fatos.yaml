@@ -1,0 +1,92 @@
+# Banco de fatos — perfil FICTÍCIO de demonstração (Ana Exemplo).
+# Fonte única de verdade: todo bullet do CV adaptado precisa apontar para um ID daqui.
+# status: confirmado = a pessoa confirmou | pendente = falta número ou confirmação.
+candidato:
+  nome: Ana Exemplo
+  cidade_uf: São Paulo - SP
+  contatos:
+    email: ana.exemplo@example.com
+    telefone: null
+    linkedin: https://www.linkedin.com/in/ana-exemplo
+    github: https://github.com/ana-exemplo
+    portfolio: null
+  formacao_atual: null
+
+experiencias:
+  - id: EXP1
+    empresa: Varejo Exemplo S.A.
+    cargo: Analista de Dados Júnior
+    area: Inteligência Comercial
+    tipo: clt
+    inicio: "2024-02"
+    fim: atual
+    fatos:
+      - id: EXP1.F1
+        texto: Construiu 8 dashboards em Power BI usados pela diretoria comercial para acompanhar vendas de 120 lojas
+        ferramentas: [Power BI, DAX, SQL]
+        metrica: "8 dashboards, 120 lojas"
+        status: confirmado
+      - id: EXP1.F2
+        texto: Automatizou em Python o relatório semanal de ruptura de estoque, que levava 6 horas e passou a rodar sozinho
+        ferramentas: [Python, pandas, SQL Server]
+        metrica: "6 h por semana economizadas"
+        status: confirmado
+      - id: EXP1.F3
+        texto: Escreveu consultas SQL para unificar dados de vendas, estoque e CRM num modelo único de BI
+        ferramentas: [SQL, SQL Server]
+        metrica: null
+        status: pendente
+
+  - id: EXP2
+    empresa: Startup Exemplo
+    cargo: Estagiária de Dados
+    tipo: estagio
+    inicio: "2023-01"
+    fim: "2024-01"
+    fatos:
+      - id: EXP2.F1
+        texto: Criou um classificador de tickets de suporte com LLM que direciona cada pedido para o time certo
+        ferramentas: [Python, OpenAI API]
+        metrica: "cerca de 300 tickets por semana"
+        status: confirmado
+      - id: EXP2.F2
+        texto: Montou ETL diário em Airflow com dados de produto para o time de growth
+        ferramentas: [Airflow, Python, PostgreSQL]
+        metrica: null
+        status: pendente
+
+projetos:
+  - id: PRJ1
+    nome: Painel aberto de preços de combustíveis
+    papel: autora
+    fatos:
+      - id: PRJ1.F1
+        texto: Painel público em Streamlit com dados da ANP, atualizado toda semana por um job agendado
+        ferramentas: [Python, Streamlit, GitHub Actions]
+        metrica: null
+        status: confirmado
+
+formacao:
+  - id: FOR1
+    curso: Bacharelado em Estatística
+    instituicao: Universidade Exemplo
+    inicio: "2019"
+    fim: "2023"
+
+certificacoes:
+  - id: CER1
+    nome: Microsoft PL-300 (Power BI Data Analyst)
+    ano: "2024"
+
+skills:
+  - {nome: Python, nivel_declarado: avançado, detalhes: "pandas, automação de relatórios, APIs", evidencias: [EXP1.F2, EXP2.F1, PRJ1.F1]}
+  - {nome: SQL, nivel_declarado: avançado, evidencias: [EXP1.F1, EXP1.F3]}
+  - {nome: Power BI, nivel_declarado: avançado, detalhes: "DAX, modelagem", evidencias: [EXP1.F1, CER1]}
+  - {nome: IA generativa, nivel_declarado: intermediário, detalhes: "classificação com LLM, engenharia de prompts", evidencias: [EXP2.F1]}
+  - {nome: Airflow, nivel_declarado: básico, evidencias: [EXP2.F2]}
+
+idiomas:
+  - {idioma: Português, nivel: nativo}
+  - {idioma: Inglês, nivel: avançado}
+
+premios: []

@@ -1,0 +1,31 @@
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+
+# Dados pessoais: banco, uploads, CVs gerados, perfis reais
+data/
+backups/
+exemplos/*
+!exemplos/demo/
+CV_*.pdf
+/*.pdf
+/*.docx
+
+# Referências internas
+docs/referencia-kanban.png
+
+# Build e dependências
+node_modules/
+frontend/dist/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

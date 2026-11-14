@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="0.6" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+
+  <!-- marca -->
+  <g transform="translate(80 92) scale(1.5)">
+    <rect width="64" height="64" rx="15" fill="url(#mark)"/>
+    <circle cx="27" cy="27" r="14" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M37.5 37.5 L49 49" stroke="#fff" stroke-width="6.5" stroke-linecap="round"/>
+    <rect x="19.6" y="20" width="3.8" height="13" rx="1.2" fill="#fff"/>
+    <rect x="25.1" y="20" width="3.8" height="9.5" rx="1.2" fill="#c7d2fe"/>
+    <rect x="30.6" y="20" width="3.8" height="6" rx="1.2" fill="#c7d2fe"/>
+    <path d="M50 6 Q50.8 13.2 58 14 Q50.8 14.8 50 22 Q49.2 14.8 42 14 Q49.2 13.2 50 6 Z" fill="#fde68a"/>
+  </g>
+
+  <!-- título -->
+  <text x="80" y="275" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="1">AI-JOB-FINDER</text>
+  <text x="82" y="333" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="29" fill="#c7d2fe">Encontra vagas, analisa o fit com IA</text>
+  <text x="82" y="372" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="29" fill="#c7d2fe">e adapta o seu CV para cada uma.</text>
+  <text x="82" y="420" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="22" fill="#a5b4fc" font-style="italic">A candidatura continua sendo sua.</text>
+
+  <!-- provedores -->
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="18" fill="#e0e7ff">
+    <g transform="translate(80 486)">
+      <rect width="88" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="44" y="24" text-anchor="middle">Claude</text>
+    </g>
+    <g transform="translate(178 486)">
+      <rect width="86" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="43" y="24" text-anchor="middle">Codex</text>
+    </g>
+    <g transform="translate(274 486)">
+      <rect width="94" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="47" y="24" text-anchor="middle">OpenAI</text>
+    </g>
+    <g transform="translate(378 486)">
+      <rect width="124" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="62" y="24" text-anchor="middle">OpenRouter</text>
+    </g>
+    <g transform="translate(512 486)">
+      <rect width="92" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="46" y="24" text-anchor="middle">Gemini</text>
+    </g>
+    <g transform="translate(614 486)">
+      <rect width="138" height="36" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#a5b4fc" stroke-opacity="0.4"/>
+      <text x="69" y="24" text-anchor="middle">Ollama (local)</text>
+    </g>
+  </g>
+  <text x="82" y="566" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#818cf8">Open source · roda local ou na sua VPS · Python + React</text>
+
+  <!-- kanban ilustrativo -->
+  <g font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif">
+    <g transform="translate(800 110)">
+      <rect width="400" height="430" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#a5b4fc" stroke-opacity="0.25"/>
+      <text x="26" y="44" font-size="17" font-weight="600" fill="#e0e7ff">Selecionadas</text>
+      <rect x="146" y="28" width="30" height="22" rx="11" fill="#ffffff" fill-opacity="0.15"/>
+      <text x="161" y="44" font-size="14" fill="#e0e7ff" text-anchor="middle">12</text>
+
+      <g transform="translate(22 68)">
+        <rect width="356" height="104" rx="14" fill="#ffffff"/>
+        <text x="18" y="34" font-size="18" font-weight="600" fill="#0f172a">Engenheiro de IA</text>
+        <text x="18" y="58" font-size="15" fill="#64748b">Fintech · Remoto</text>
+        <rect x="18" y="70" width="84" height="24" rx="12" fill="#fee2e2"/>
+        <text x="60" y="87" font-size="13" font-weight="600" fill="#b91c1c" text-anchor="middle">Quente · 88</text>
+        <rect x="270" y="20" width="68" height="24" rx="12" fill="#eef2ff"/>
+        <text x="304" y="37" font-size="12" fill="#4338ca" text-anchor="middle">CV pronto</text>
+      </g>
+      <g transform="translate(22 186)">
+        <rect width="356" height="104" rx="14" fill="#ffffff"/>
+        <text x="18" y="34" font-size="18" font-weight="600" fill="#0f172a">Desenvolvedor Python</text>
+        <text x="18" y="58" font-size="15" fill="#64748b">Indústria · Híbrido</text>
+        <rect x="18" y="70" width="84" height="24" rx="12" fill="#ffedd5"/>
+        <text x="60" y="87" font-size="13" font-weight="600" fill="#c2410c" text-anchor="middle">Morna · 72</text>
+      </g>
+      <g transform="translate(22 304)">
+        <rect width="356" height="104" rx="14" fill="#ffffff"/>
+        <text x="18" y="34" font-size="18" font-weight="600" fill="#0f172a">Analista de Dados</text>
+        <text x="18" y="58" font-size="15" fill="#64748b">Energia · Presencial</text>
+        <rect x="18" y="70" width="76" height="24" rx="12" fill="#e0f2fe"/>
+        <text x="56" y="87" font-size="13" font-weight="600" fill="#0369a1" text-anchor="middle">Fria · 58</text>
+        <rect x="104" y="70" width="64" height="24" rx="12" fill="#fef3c7"/>
+        <text x="136" y="87" font-size="13" font-weight="600" fill="#b45309" text-anchor="middle">alerta</text>
+      </g>
+    </g>
+  </g>
+</svg>
